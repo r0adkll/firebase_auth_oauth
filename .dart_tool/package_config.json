@@ -62,18 +62,6 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "firebase_auth_oauth_platform_interface",
-      "rootUri": "file:///Users/drew.heavner/.pub-cache/hosted/pub.dartlang.org/firebase_auth_oauth_platform_interface-0.1.0+3",
-      "packageUri": "lib/",
-      "languageVersion": "2.2"
-    },
-    {
-      "name": "firebase_auth_oauth_web",
-      "rootUri": "file:///Users/drew.heavner/.pub-cache/hosted/pub.dartlang.org/firebase_auth_oauth_web-0.1.0+5",
-      "packageUri": "lib/",
-      "languageVersion": "2.2"
-    },
-    {
       "name": "firebase_auth_platform_interface",
       "rootUri": "file:///Users/drew.heavner/.pub-cache/hosted/pub.dartlang.org/firebase_auth_platform_interface-1.1.5",
       "packageUri": "lib/",
@@ -248,7 +236,7 @@
       "languageVersion": "2.2"
     }
   ],
-  "generated": "2020-03-08T21:47:09.264540Z",
+  "generated": "2020-03-09T02:56:28.638841Z",
   "generator": "pub",
   "generatorVersion": "2.8.0-dev.5.0.flutter-fc3af737c7"
 }

@@ -1,24 +1,37 @@
 library firebase_apple_auth;
 
-import 'package:firebase_auth_oauth_platform_interface/firebase_auth_oauth_platform_interface.dart'
-    as platform;
-import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:convert';
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 
-class FirebaseAuthOAuth implements platform.FirebaseAuthOAuth {
-  final platform.FirebaseAuthOAuth _delegate;
+class FirebaseAuthOAuth {
+  final FirebaseApp _app;
 
-  FirebaseAuthOAuth({FirebaseApp app})
-      : _delegate = app != null
-            ? platform.FirebaseAuthOAuth.instance.withApp(app)
-            : platform.FirebaseAuthOAuth.instance;
+  static const MethodChannel _channel =
+  const MethodChannel('me.amryousef.apple.auth/firebase_apple_auth');
+
+  FirebaseAuthOAuth._({FirebaseApp app})
+      : _app = app ?? FirebaseApp.instance;
+
+  factory FirebaseAuthOAuth() {
+    return FirebaseAuthOAuth._();
+  }
 
   @override
-  Future<FirebaseUser> openSignInFlow(String provider, List<String> scopes,
-          [Map<String, String> customOAuthParameters]) =>
-      _delegate.openSignInFlow(provider, scopes, customOAuthParameters);
+  Future<String> openSignInFlow(String provider, List<String> scopes,
+      [Map<String, String> customOAuthParameters]) async {
+    return await _channel.invokeMethod("openSignInFlow", {
+      'provider': provider,
+      'app': _app.name,
+      'scopes': json.encode(scopes),
+      if (customOAuthParameters != null)
+        'parameters': json.encode(customOAuthParameters)
+    });
+  }
 
   @override
-  platform.FirebaseAuthOAuth withApp(FirebaseApp app) =>
-      FirebaseAuthOAuth(app: app);
+  FirebaseAuthOAuth withApp(FirebaseApp app) =>
+      FirebaseAuthOAuth._(app: app);
 }
