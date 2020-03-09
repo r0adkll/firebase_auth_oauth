@@ -66,8 +66,11 @@ public class SwiftFirebaseAppleAuthPlugin: UIViewController, FlutterPlugin, ASAu
 						if error != nil {
 							result(FlutterError.init(code: "100", message: error?.localizedDescription, details: nil))
 						}
-						// User is signed in.
-						result("")
+            if let oAuthCredential = authResult?.credential as? OAuthCredential {
+                result("\(oAuthCredential.accessToken ?? ""):\(oAuthCredential.secret ?? "")")
+            } else {
+                result("")
+            }
 					}
 				}
 			}

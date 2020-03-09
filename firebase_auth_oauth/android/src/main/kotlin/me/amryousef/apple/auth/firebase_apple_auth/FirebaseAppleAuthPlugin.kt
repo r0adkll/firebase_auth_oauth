@@ -4,6 +4,7 @@ import android.app.Activity
 import androidx.annotation.NonNull
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.OAuthCredential
 import com.google.firebase.auth.OAuthProvider
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -58,14 +59,18 @@ class FirebaseAppleAuthPlugin : FlutterPlugin, ActivityAware, MethodCallHandler 
             val pending = auth.pendingAuthResult
             @Suppress("IfThenToElvis")
             if (pending != null) {
-                pending.addOnSuccessListener {
-                    result.success("")
+                pending.addOnSuccessListener { authResult ->
+                    (authResult.credential as? OAuthCredential)?.let { oAuthCredential ->
+                        result.success("${oAuthCredential.accessToken}:${oAuthCredential.secret}")
+                    } ?: result.success("")
                 }.addOnFailureListener { error ->
                     result.error("100", error.localizedMessage, null)
                 }
             } else {
-                auth.startActivityForSignInWithProvider(it, provider).addOnSuccessListener {
-                    result.success("")
+                auth.startActivityForSignInWithProvider(it, provider).addOnSuccessListener { authResult ->
+                    (authResult.credential as? OAuthCredential)?.let { oAuthCredential ->
+                        result.success("${oAuthCredential.accessToken}:${oAuthCredential.secret}")
+                    } ?: result.success("")
                 }.addOnFailureListener { error ->
                     result.error("200", error.localizedMessage, null)
                 }
