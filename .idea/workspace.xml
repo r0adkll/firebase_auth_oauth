@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b32c45db-4472-44e1-975e-47df6cd1e790" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/firebase_auth_oauth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/firebase_auth_oauth.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b32c45db-4472-44e1-975e-47df6cd1e790" name="Default Changelist" comment="Patching in fix">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/firebase_auth_oauth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firebase_auth_oauth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftFirebaseAppleAuthPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/SwiftFirebaseAppleAuthPlugin.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +29,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
@@ -53,6 +51,29 @@
       <option name="presentableId" value="Default" />
       <updated>1583716211575</updated>
     </task>
+    <task id="LOCAL-00001" summary="Reducing library">
+      <created>1583722734622</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583722734622</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reducing library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reducing library" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="697" y="251" key="CommitChangelistDialog2" timestamp="1586551696140">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="389" y="212" key="CommitChangelistDialog2/0.23.1920.1177@0.23.1920.1177" timestamp="1583722734043" />
+    <state x="697" y="251" key="CommitChangelistDialog2/0.23.3440.1417/-1680.23.1680.1027@0.23.3440.1417" timestamp="1586551696140" />
+    <state x="560" y="351" key="Vcs.Push.Dialog.v2" timestamp="1583722774248">
+      <screen x="0" y="23" width="1920" height="1177" />
+    </state>
+    <state x="560" y="351" key="Vcs.Push.Dialog.v2/0.23.1920.1177@0.23.1920.1177" timestamp="1583722774248" />
   </component>
 </project>
